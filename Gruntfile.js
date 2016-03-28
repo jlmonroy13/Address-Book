@@ -2,7 +2,7 @@ module.exports = function(grunt) {
 	grunt.initConfig({
 		watch: {
 		  sass: {
-		    files: ['css/sass/layouts/*.scss', 'css/sass/*.scss', 'js/*.js'],
+		    files: ['sass/modules/*.scss', 'sass/*.scss', 'app/css/*.css', 'js/*.js'],
 		    tasks: ['sass'],
 		  },
 		},
@@ -12,7 +12,7 @@ module.exports = function(grunt) {
 					sourcemap: 'none',
 				},
 				files: {
-					'css/main.css': 'css/sass/main.scss'
+					'app/css/main.css': 'sass/main.scss'
 				},
 			},
 		},
@@ -20,14 +20,15 @@ module.exports = function(grunt) {
             dev: {
                 bsFiles: {
                     src : [
-                        'css/*.css',
-                        '*.html',
-                        'js/*.js'
+                    	'sass/*.scss',
+                        'app/css/*.css',
+                        'app/*.html',
+                        'app/js/*.js'
                     ]
                 },
                 options: {
                     watchTask: true,
-                    server: './'
+                    server: './app'
                 }
             }
         }

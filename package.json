@@ -1,5 +1,5 @@
 {
-  "name": "addressbook",
+  "name": "Address-Book",
   "version": "1.0.0",
   "description": "",
   "main": "Gruntfile.js",
@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Selvio/addressbook.git"
+    "url": "git+https://github.com/jlmonroy13/Address-Book.git"
   },
-  "author": "Selvio Perez",
+  "author": "Jorge Monroy",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Selvio/addressbook/issues"
+    "url": "https://github.com/jlmonroy13/Address-Book/issues"
   },
-  "homepage": "https://github.com/Selvio/addressbook#readme",
+  "homepage": "https://github.com/jlmonroy13/Address-Book#readme",
   "dependencies": {
     "grunt": "^0.4.5"
   },
