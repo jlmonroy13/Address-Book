@@ -10,6 +10,12 @@
     color: $yellow-favorite;
   }
 }
+.icon-star--favorite {
+  color: $yellow-favorite;
+  &:hover {
+    color: $gray-icon;
+  }
+}
 .icon-email--size, 
 .icon-phone--size,
 .icon-twitter--size,

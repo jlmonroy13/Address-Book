@@ -1,13 +1,30 @@
-$(function() {
-  var source = $('#first-template').html();
-  var template = Handlebars.compile(source);
+$(function(){
+  var modal = '#modal',
+    addModalBtn = '.js-add-contact-btn',
+    contactCollection = [],
+    $contactlist = $('.js-contactslist'),
+    $favoritelist = $('.js-favoriteslist');
 
-  var context = {
-    title: "All about Handlebars",
-    body: "<p>This is a post about ...</p>"
+  $(addModalBtn).on('click', addModalBtnHandler);
+
+  function addModalBtnHandler(e){
+    var newContact = addNewContact(modal);
+    newContact.init({
+      saveContactHandler: function(contact){
+        contactCollection = contactCollection.concat([contact]);
+        console.log(contactCollection);
+        renderHTML(contactCollection, $contactlist);
+      }
+    });
   }
-
-  var el_html = template(context);
-
-  $('#render_here').html(el_html);
+  // FAVORITE BUTTON
+  $('.table').on('click', '.js-favorite-btn', function(){
+    var index = $(this).data('index');
+    if(contactCollection[index].favorites) {
+      contactCollection[index].favorites = false;
+    }else {
+      contactCollection[index].favorites = true;
+    }
+    addFavorite(contactCollection, $favoritelist, $contactlist);
+  });
 });

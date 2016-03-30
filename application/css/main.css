@@ -1058,6 +1058,11 @@ th {
   .icon-star--color:hover {
     color: #F6B500; }
 
+.icon-star--favorite {
+  color: #F6B500; }
+  .icon-star--favorite:hover {
+    color: #B6B6B6; }
+
 .icon-email--size,
 .icon-phone--size,
 .icon-twitter--size,
